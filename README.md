@@ -70,10 +70,12 @@ cin >> temperatura;
 cout << "Ingresa la presion de los neumáticos en bares ";
 double presion;// Presión de los neumáticos (en bares)
 cin >> presion;
-int desgastePorcentaje = calcularDesgasteNeumaticos(velocidadCurva, temperatura, presion);
+
+int desgastePorcentaje = desgasteTotal(promedioV, temperatura, presion);
 cout << "El desgaste estimado de los neumáticos en una curva es del " << desgastePorcentaje << "%." << endl;
 cout << "Realizando cálculos de desgaste por vueltas..." << endl;
 int desgasteVuelta = (desgastePorcentaje * cantidadCurvas);
 cout << desgasteVuelta;
 return 0;
 }
+
